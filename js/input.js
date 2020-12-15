@@ -2,15 +2,15 @@
 	
 	var s;
 
-	$('.acf-css-checkall').live( 'click', function() {
+	$('.acf-css-checkall').on( 'click', function() {
 		$(this).toggleClass('checked');
 	});
 
-	$('.acf-css-margin').live( 'change', function() {
+	$('.acf-css-margin').on( 'input', function() {
 		s = $(this).val();
 		checkproperty(s);
 		$(this).val(s);
-		if ( $('.acf-margin-checkall').hasClass('checked') ) {
+		if ( $(this).siblings('.acf-css-margin-caption').find('.acf-margin-checkall').hasClass('checked') ) {
 			$('.acf-css-margin').each( function() {
 				$(this).val(s);
 			});
@@ -19,24 +19,28 @@
 		$('.acf-css-margin-shorthand').val(marginShort);
 	});
 
-	$('.acf-css-border').live( 'change', function() {
+	
+	
+	$('.acf-css-border').on( 'input', function() {
 		s = $(this).val();
 		checkproperty(s);
 		$(this).val(s);
-		if ( $('.acf-border-checkall').hasClass('checked') ) {
+		if ( $(this).siblings('.acf-css-border-caption').find('.acf-border-checkall').hasClass('checked') ) {
 			$('.acf-css-border').each( function() {
 				$(this).val(s);
 			});
 		}
 		var borderShort = $('.acf-css-border-top').val();
 		$('.acf-css-border-shorthand').val(borderShort);
+		
 	});	
+	
 
-	$('.acf-css-padding').live( 'change', function() {
+	$('.acf-css-padding').on( 'input', function() {
 		s = $(this).val();
 		checkproperty(s);
 		$(this).val(s);
-		if ( $('.acf-padding-checkall').hasClass('checked') ) {
+		if ( $(this).siblings('.acf-css-padding-caption').find('.acf-padding-checkall').hasClass('checked') ) {
 			$('.acf-css-padding').each( function() {
 				$(this).val(s);
 			});
@@ -45,12 +49,11 @@
 		$('.acf-css-padding-shorthand').val(paddingShort);
 	});
 
-	$('.acf-css-border-radius').live( 'change', function() {
+	$('.acf-css-border-radius').on( 'input', function() {
 		s = $(this).val();
 		checkproperty(s);
 		$(this).val(s);
-
-		if ( $('.acf-border-radius-checkall').hasClass('checked') ) {
+		if ( $(this).closest('.acf-border-settings').find('.acf-border-radius-checkall').hasClass('checked') ) {
 			$('.acf-css-border-radius').each( function() {
 				$(this).val(s);
 			});
@@ -65,7 +68,7 @@
 		});
 	});
 
-	$('.border-style').live( 'change', function() {		
+	$('.border-style').on( 'change', function() {		
 		$('.acf-css-layout-border').css({
 			"border-style": $(this).val(),
 		})
@@ -127,7 +130,7 @@
 		}
 	});
 
-	$('.acf-css-info').live('click', function() {
+	$('.acf-css-info').on('click', function() {
 		$('.infotext').slideToggle();
 	});
 
