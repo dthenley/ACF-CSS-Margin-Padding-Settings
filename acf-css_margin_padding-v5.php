@@ -232,7 +232,7 @@ class acf_field_css_margin_padding extends acf_field {
 				<div>
 					<span class="dashicons acf-css-info dashicons-info"></span>
 				</div>
-				<div class="acf-css-margin-caption"><?php _e('margin', 'acf-css_margin_padding'); ?><span class="dashicons dashicons-lock acf-css-checkall acf-margin-checkall" data-fieldname="<?php echo $field['name']; ?>"></span></div>
+				<div class="acf-css-margin-caption field-caption"><?php _e('margin', 'acf-css_margin_padding'); ?><span class="dashicons dashicons-lock acf-css-checkall acf-margin-checkall" data-fieldname="<?php echo $field['name']; ?>"></span></div>
 				<input
 					type = "text"
 					class = "acf-css-margin acf-css-margin-top css-layout-input"
@@ -270,7 +270,7 @@ class acf_field_css_margin_padding extends acf_field {
 					tabindex = "4"
 				>
 				<div class="acf-css-layout-border" data-fieldname="<?php echo $field['name']; ?>" style="border-top-left-radius: <?php echo $field_value['border-top-left-radius'] ?>; border-top-right-radius: <?php echo $field_value['border-top-right-radius'] ?>; border-bottom-right-radius: <?php echo $field_value['border-bottom-right-radius'] ?>; border-bottom-left-radius: <?php echo $field_value['border-bottom-left-radius'] ?>; border-color: <?php echo $field_value['border-color'] ?>; border-style: <?php echo $field_value['border-style'] ?>; border-width: 1px; background: <?php echo $field_value['background-color'] ?>;">
-					<div class="acf-css-border-caption"><?php _e('border', 'acf-css_margin_padding'); ?><span class="dashicons dashicons-lock acf-css-checkall acf-border-checkall" data-fieldname="<?php echo $field['name']; ?>"></span></div>
+					<div class="acf-css-border-caption field-caption"><?php _e('border', 'acf-css_margin_padding'); ?><span class="dashicons dashicons-lock acf-css-checkall acf-border-checkall" data-fieldname="<?php echo $field['name']; ?>"></span></div>
 					
 					<input 
 						type = "text"
@@ -309,7 +309,7 @@ class acf_field_css_margin_padding extends acf_field {
 						tabindex = "8"
 					>
 					<div class="acf-css-layout-padding" data-fieldname="<?php echo $field['name']; ?>" style="background: transparent;">
-						<div class="acf-css-padding-caption"><?php _e('padding', 'acf-css_margin_padding'); ?><span class="dashicons dashicons-lock acf-css-checkall acf-padding-checkall" data-fieldname="<?php echo $field['name']; ?>"></span></div>
+						<div class="acf-css-padding-caption field-caption"><?php _e('padding', 'acf-css_margin_padding'); ?><span class="dashicons dashicons-lock acf-css-checkall acf-padding-checkall" data-fieldname="<?php echo $field['name']; ?>"></span></div>
 						<input 
 							type = "text"
 							class = "acf-css-padding acf-css-padding-top css-layout-input"
@@ -347,7 +347,7 @@ class acf_field_css_margin_padding extends acf_field {
 							tabindex = "12"
 						>
 						<div class="acf-css-layout-center">
-							<div class="acf-css-center-caption" data-fieldname="<?php echo $field['name']; ?>">
+							<div class="acf-css-center-caption field-caption" data-fieldname="<?php echo $field['name']; ?>">
 								<p style="color: <?php echo $field_value['color']; ?>; font-size:13px; text-align:center; padding: 0; margin:0; line-height:16px;">Lorem ipsum dolor sit amet, consectetur adipisici elit</p>
 							</div>
 						</div>

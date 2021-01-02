@@ -6,55 +6,22 @@
 		$(this).toggleClass('checked');
 	});
 
-	$('.acf-css-margin').on( 'input', function() {
-		s = $(this).val();
-		checkproperty(s);
-		$(this).val(s);
-		if ( $(this).siblings('.acf-css-margin-caption').find('.acf-margin-checkall').hasClass('checked') ) {
-			$('.acf-css-margin').each( function() {
-				$(this).val(s);
-			});
-		}
-		var marginShort = $('.acf-css-margin-top').val() + ' ' + $('.acf-css-margin-right').val() + ' ' + $('.acf-css-margin-bottom').val() + ' ' + $('.acf-css-margin-left').val();
-		$('.acf-css-margin-shorthand').val(marginShort);
-	});
+	check_all_function('.acf-css-margin');
+
+	check_all_function('.acf-css-border');
+
+	check_all_function('.acf-css-padding');
+
+	//check_all_function('.acf-css-border-radius');
 
 	
-	
-	$('.acf-css-border').on( 'input', function() {
-		s = $(this).val();
-		checkproperty(s);
-		$(this).val(s);
-		if ( $(this).siblings('.acf-css-border-caption').find('.acf-border-checkall').hasClass('checked') ) {
-			$('.acf-css-border').each( function() {
-				$(this).val(s);
-			});
-		}
-		var borderShort = $('.acf-css-border-top').val();
-		$('.acf-css-border-shorthand').val(borderShort);
-		
-	});	
-	
-
-	$('.acf-css-padding').on( 'input', function() {
-		s = $(this).val();
-		checkproperty(s);
-		$(this).val(s);
-		if ( $(this).siblings('.acf-css-padding-caption').find('.acf-padding-checkall').hasClass('checked') ) {
-			$('.acf-css-padding').each( function() {
-				$(this).val(s);
-			});
-		}
-		var paddingShort = $('.acf-css-padding-top').val() + ' ' + $('.acf-css-padding-right').val() + ' ' + $('.acf-css-padding-bottom').val() + ' ' + $('.acf-css-padding-left').val();
-		$('.acf-css-padding-shorthand').val(paddingShort);
-	});
 
 	$('.acf-css-border-radius').on( 'input', function() {
 		s = $(this).val();
 		checkproperty(s);
 		$(this).val(s);
 		if ( $(this).closest('.acf-border-settings').find('.acf-border-radius-checkall').hasClass('checked') ) {
-			$('.acf-css-border-radius').each( function() {
+			$(this).siblings('.acf-css-border-radius').each( function() {
 				$(this).val(s);
 			});
 		}
@@ -154,5 +121,18 @@
 			return s;
 		}
 	};
+
+	function check_all_function(ele){
+		$(ele).on( 'input', function() {
+			s = $(this).val();
+			checkproperty(s);
+			$(this).val(s);
+			if ( $(this).siblings('.field-caption').find('.acf-css-checkall').hasClass('checked') ) {
+				$(this).siblings(ele).each( function() {
+					$(this).val(s);
+				});
+			}
+		});
+	}
 
 })(jQuery);
