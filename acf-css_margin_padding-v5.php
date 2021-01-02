@@ -225,6 +225,7 @@ class acf_field_css_margin_padding extends acf_field {
 			data-fieldname = "<?php echo $field['name']; ?>"
 		>
 		<div class="container acf-container-css_layout">
+
 			<div class="infotext">
 				<p><?php _e('Note, that if you enter a value without a unit, the default unit <em>px</em> will automatically appended. If an invalid value is entered, it is replaced by the default value <em>0px</em>. Accepted units are: <em>px</em>, <em>%</em> and <em>em</em></p><p>Activate the lock <span class="dashicons dashicons-lock acf-css-checkall" style="margin:0"></span> to link all values.', 'acf-css_margin_padding'); ?><p>
 			</div>
@@ -240,7 +241,7 @@ class acf_field_css_margin_padding extends acf_field {
 					id = "<?php echo $fieldname ?>_margin-top"
 					value = "<?php echo $field_value['margin-top'] ?>"
 					data-fieldname = "<?php echo $field['name']; ?>"
-					tabindex = "1"
+					
 				>
 				<input
 					type = "text"
@@ -249,7 +250,7 @@ class acf_field_css_margin_padding extends acf_field {
 					id = "<?php echo $fieldname ?>_margin-right"
 					value = "<?php echo $field_value['margin-right'] ?>"
 					data-fieldname = "<?php echo $field['name']; ?>"
-					tabindex = "2"
+					
 				>
 				<input
 					type = "text"
@@ -258,7 +259,7 @@ class acf_field_css_margin_padding extends acf_field {
 					id = "<?php echo $fieldname ?>_margin-bottom"
 					value = "<?php echo $field_value['margin-bottom'] ?>"
 					data-fieldname = "<?php echo $field['name']; ?>"
-					tabindex = "3"
+					
 				>
 				<input
 					type = "text"
@@ -267,7 +268,7 @@ class acf_field_css_margin_padding extends acf_field {
 					id = "<?php echo $fieldname ?>_margin-left"
 					value = "<?php echo $field_value['margin-left'] ?>"
 					data-fieldname = "<?php echo $field['name']; ?>"
-					tabindex = "4"
+					
 				>
 				<div class="acf-css-layout-border" data-fieldname="<?php echo $field['name']; ?>" style="border-top-left-radius: <?php echo $field_value['border-top-left-radius'] ?>; border-top-right-radius: <?php echo $field_value['border-top-right-radius'] ?>; border-bottom-right-radius: <?php echo $field_value['border-bottom-right-radius'] ?>; border-bottom-left-radius: <?php echo $field_value['border-bottom-left-radius'] ?>; border-color: <?php echo $field_value['border-color'] ?>; border-style: <?php echo $field_value['border-style'] ?>; border-width: 1px; background: <?php echo $field_value['background-color'] ?>;">
 					<div class="acf-css-border-caption field-caption"><?php _e('border', 'acf-css_margin_padding'); ?><span class="dashicons dashicons-lock acf-css-checkall acf-border-checkall" data-fieldname="<?php echo $field['name']; ?>"></span></div>
@@ -279,7 +280,7 @@ class acf_field_css_margin_padding extends acf_field {
 						id = "<?php echo $fieldname; ?>_border-top"
 						value = "<?php echo $field_value['border-top']; ?>"
 						data-fieldname = "<?php echo $field['name']; ?>"
-						tabindex = "5"
+						
 					>
 					<input 
 						type = "text"
@@ -288,7 +289,7 @@ class acf_field_css_margin_padding extends acf_field {
 						id = "<?php echo $fieldname; ?>_border-right"
 						value = "<?php echo $field_value['border-right']; ?>"
 						data-fieldname = "<?php echo $field['name']; ?>"
-						tabindex = "6"
+						
 					>
 					<input 
 						type = "text"
@@ -297,7 +298,7 @@ class acf_field_css_margin_padding extends acf_field {
 						id = "<?php echo $fieldname; ?>_border-bottom"
 						value = "<?php echo $field_value['border-bottom']; ?>"
 						data-fieldname = "<?php echo $field['name']; ?>"
-						tabindex = "7"
+						
 					>
 					<input 
 						type = "text"
@@ -306,7 +307,7 @@ class acf_field_css_margin_padding extends acf_field {
 						id = "<?php echo $fieldname; ?>_border-left"
 						value = "<?php echo $field_value['border-left']; ?>"
 						data-fieldname = "<?php echo $field['name']; ?>"
-						tabindex = "8"
+						
 					>
 					<div class="acf-css-layout-padding" data-fieldname="<?php echo $field['name']; ?>" style="background: transparent;">
 						<div class="acf-css-padding-caption field-caption"><?php _e('padding', 'acf-css_margin_padding'); ?><span class="dashicons dashicons-lock acf-css-checkall acf-padding-checkall" data-fieldname="<?php echo $field['name']; ?>"></span></div>
@@ -317,7 +318,7 @@ class acf_field_css_margin_padding extends acf_field {
 							id = "<?php echo $fieldname; ?>_padding-top"
 							value = "<?php echo $field_value['padding-top']; ?>"
 							data-fieldname = "<?php echo $field['name']; ?>"
-							tabindex = "9"
+							
 						>
 						<input 
 							type = "text"
@@ -326,7 +327,7 @@ class acf_field_css_margin_padding extends acf_field {
 							id = "<?php echo $fieldname; ?>_padding-right"
 							value = "<?php echo $field_value['padding-right']; ?>"
 							data-fieldname = "<?php echo $field['name']; ?>"
-							tabindex = "10"
+							
 						>
 						<input 
 							type = "text"
@@ -335,7 +336,7 @@ class acf_field_css_margin_padding extends acf_field {
 							id = "<?php echo $fieldname; ?>_padding-bottom"
 							value = "<?php echo $field_value['padding-bottom']; ?>"
 							data-fieldname = "<?php echo $field['name']; ?>"
-							tabindex = "11"
+							
 						>
 						<input 
 							type = "text"
@@ -344,7 +345,7 @@ class acf_field_css_margin_padding extends acf_field {
 							id = "<?php echo $fieldname; ?>_padding-left"
 							value = "<?php echo $field_value['padding-left']; ?>"
 							data-fieldname = "<?php echo $field['name']; ?>"
-							tabindex = "12"
+							
 						>
 						<div class="acf-css-layout-center">
 							<div class="acf-css-center-caption field-caption" data-fieldname="<?php echo $field['name']; ?>">
@@ -409,7 +410,7 @@ class acf_field_css_margin_padding extends acf_field {
 								id = "<?php echo $fieldname; ?>_border-top-left-radius"
 								value = "<?php echo $field_value['border-top-left-radius']; ?>"
 								data-fieldname = "<?php echo $field['name']; ?>"
-								tabindex = "13"
+								
 							>
 						</div>
 						<div>
@@ -421,7 +422,7 @@ class acf_field_css_margin_padding extends acf_field {
 								id = "<?php echo $fieldname; ?>_border-bottom-left-radius"
 								value = "<?php echo $field_value['border-bottom-left-radius']; ?>"
 								data-fieldname = "<?php echo $field['name']; ?>"
-								tabindex = "15"
+								
 							>
 						</div>
 					</div>
@@ -436,7 +437,7 @@ class acf_field_css_margin_padding extends acf_field {
 								id = "<?php echo $fieldname; ?>_border-top-right-radius"
 								value = "<?php echo $field_value['border-top-right-radius']; ?>"
 								data-fieldname = "<?php echo $field['name']; ?>"
-								tabindex = "14"
+								
 							>
 						</div>
 						<div>
@@ -448,7 +449,7 @@ class acf_field_css_margin_padding extends acf_field {
 								id = "<?php echo $fieldname; ?>_border-bottom-right-radius"
 								value = "<?php echo $field_value['border-bottom-right-radius']; ?>"
 								data-fieldname = "<?php echo $field['name']; ?>"
-								tabindex = "16"
+								
 							>
 						</div>
 					</div>
