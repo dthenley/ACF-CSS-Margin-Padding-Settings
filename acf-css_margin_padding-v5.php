@@ -69,11 +69,11 @@ class acf_field_css_margin_padding extends acf_field {
 		add_action( 'admin_enqueue_scripts', 'wptuts_add_color_picker' );
 		function wptuts_add_color_picker( $hook ) {
 		 
-		if( is_admin() ) {
-		 
-		        // Add the color picker css file
-		    wp_enqueue_style( 'wp-color-picker' );
-		 
+			if( is_admin() ) {
+			
+				// Add the color picker css file
+				wp_enqueue_style( 'wp-color-picker' );
+			
 		        // Include our custom jQuery file with WordPress Color Picker dependency
 		        wp_enqueue_script( 'custom-script-handle', plugins_url( 'js/input.js', __FILE__ ), array( 'wp-color-picker' ), false, true );
 		    }
@@ -397,6 +397,19 @@ class acf_field_css_margin_padding extends acf_field {
 						data-fieldname = "<?php echo $field['name']; ?>"
 					/></div>
 					<div class="clear"></div>
+					
+					<div class="acf-css-background-image-settings acf-css-background-image-style-settings">
+					<label for= "<?php echo $fieldname; ?>_background-image"><?php _e('Background Image', 'acf-css_margin_padding'); ?></label>
+					<input
+						name="<?php echo $field['name']; ?>[background-image]"
+						id="<?php echo $fieldname; ?>_background-image"
+						class = "acf-css-background-image-field"
+						type="file"
+						value="<?php echo $field_value['background-image']; ?>"
+						data-fieldname = "<?php echo $field['name']; ?>"
+					/></div>
+					<div class="clear"></div>
+					
 					<div>
 					<label><?php _e('Border Radius', 'acf-css_margin_padding'); ?> <span class="dashicons dashicons-lock acf-css-checkall acf-border-radius-checkall" data-fieldname="<?php echo $field['name']; ?>"></span></label>
 
@@ -456,7 +469,8 @@ class acf_field_css_margin_padding extends acf_field {
 				</div>
 			</div>
 		</div>
-	<?php }
+	<?php 
+	}
 	
 		
 	/*
